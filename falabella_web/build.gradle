@@ -32,16 +32,15 @@ ext {
     junitVersion = '4.13.1'
     assertJVersion = '3.8.0'
     logbackVersion = '1.2.3'
-    sonarVersion = '3.6.0.1398'
 }
 
 dependencies {
     implementation "ch.qos.logback:logback-classic:${logbackVersion}"
+    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}"
+    implementation 'io.github.bonigarcia:webdrivermanager:4.4.3'
 
-    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
+    testImplementation "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
             "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
             "net.serenity-bdd:serenity-rest-assured:$serenityCoreVersion",
             "net.serenity-bdd:serenity-screenplay-rest:$serenityCoreVersion",
@@ -50,8 +49,7 @@ dependencies {
             "org.junit.jupiter:junit-jupiter-engine:5.8.2",
             "org.junit.vintage:junit-vintage-engine:5.8.2",
             "org.assertj:assertj-core:${assertJVersion}",
-            "org.aeonbits.owner:owner:1.0.4",
-            "org.sonarsource.scanner.maven:sonar-maven-plugin:${sonarVersion}"
+            "org.aeonbits.owner:owner:1.0.4"
 }
 
 test {
