@@ -1,4 +1,4 @@
-package runners;
+package com.falabella.runners;
 
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
     plugin = {"pretty"},
     features = "src/test/resources/features",
     tags = "@automated",
-    glue = "stepdefinitions"
+    glue = "com/falabella/stepdefinitions"
 )
 
 public class Runner {
