@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
+import net.serenitybdd.screenplay.ui.Button;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
@@ -41,13 +42,11 @@ public class FalabellaProduct implements Task {
         Click.on(FalabellaPageUI.GAMING_PC),
         WaitUntil.the(FalabellaPageUI.LAPTOP, isEnabled()),
         Click.on(FalabellaPageUI.LAPTOP),
-        WaitUntil.the(FalabellaPageUI.CAR_ADD, isVisible()),
-        WaitUntil.the(FalabellaPageUI.CAR_ADD, isEnabled()),
-        Click.on(FalabellaPageUI.CAR_ADD),
-        WaitUntil.the(FalabellaPageUI.GO_TO_CAR, isVisible()),
+        Click.on(Button.called("Agregar")),
+//        WaitUntil.the(FalabellaPageUI.CAR_ADD, isEnabled()),
+//        Click.on(FalabellaPageUI.CAR_ADD),
         WaitUntil.the(FalabellaPageUI.GO_TO_CAR, isEnabled()),
         Click.on(FalabellaPageUI.GO_TO_CAR),
-        WaitUntil.the(FalabellaPageUI.CONTINUE_SHOPPING, isVisible()),
         WaitUntil.the(FalabellaPageUI.CONTINUE_SHOPPING, isEnabled()),
         Click.on(FalabellaPageUI.CONTINUE_SHOPPING),
         WaitUntil.the(FalabellaPageUI.EMAIL, isVisible()),

@@ -17,7 +17,7 @@ public class FalabellaPageUI {
       .located(By.cssSelector("#testId-pod-72729328"));
 
   public static final Target CAR_ADD = Target.the("boton agregar carrito")
-      .located(By.cssSelector("#product-b2c-ui div.jsx-1942312284.addToCart-container.fa--add-to-cart__mobile.quantity-input"));
+      .located(By.cssSelector("#product-b2c-ui div.jsx-1592394509.productContainer div.jsx-216455587.pdp-container > section:nth-child(3) > div > div > div > div.jsx-1942312284.add-quantity-and-add-to-cart-container button"));
 
   public static final Target GO_TO_CAR = Target.the("ir al carrito")
       .located(By.xpath("//*[@id=\"linkButton\"]"));
