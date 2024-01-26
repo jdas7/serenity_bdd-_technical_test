@@ -22,7 +22,7 @@ public class FalabellaNotification implements Task {
   @Step("client accept notification")
   public <T extends Actor> void performAs(T user) {
     user.attemptsTo(
-        Click.on("css=.airship-html-prompt-shadow")
+        Click.on(FalabellaPageUI.BUTTON_LOVE)
     );
   }
 

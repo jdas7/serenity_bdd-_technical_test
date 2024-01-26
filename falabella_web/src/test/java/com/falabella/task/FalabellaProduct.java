@@ -16,16 +16,14 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 public class FalabellaProduct implements Task {
 
   private String product;
-  private String email;
 
   @Step("enter the product to consult")
-  public static Task productPurchase(String product, String email) {
-    return Instrumented.instanceOf(FalabellaProduct.class).withProperties(product, email);
+  public static Task product(String product) {
+    return Instrumented.instanceOf(FalabellaProduct.class).withProperties(product);
   }
 
-  public FalabellaProduct(String product, String email) {
+  public FalabellaProduct(String product) {
     this.product = product;
-    this.email = email;
   }
 
   @Step("customer consults your product")
@@ -39,13 +37,8 @@ public class FalabellaProduct implements Task {
         Click.on(FalabellaPageUI.BUTTON_CONSULT),
         WaitUntil.the(FalabellaPageUI.LAPTOP, isEnabled()),
         Click.on(FalabellaPageUI.LAPTOP),
-        WaitUntil.the(FalabellaPageUI.CAR_ADD, isEnabled()),
         Click.on(FalabellaPageUI.CAR_ADD),
-        Click.on(FalabellaPageUI.GO_TO_CAR),
-        Click.on(FalabellaPageUI.CONTINUE_SHOPPING),
-        WaitUntil.the(FalabellaPageUI.EMAIL, isVisible()),
-        WaitUntil.the(FalabellaPageUI.EMAIL, isEnabled()),
-        Enter.theValue(email).into(FalabellaPageUI.EMAIL)
+        Click.on(FalabellaPageUI.GO_TO_CAR)
     );
 
   }
