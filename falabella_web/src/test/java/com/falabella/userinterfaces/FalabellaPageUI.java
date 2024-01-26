@@ -14,16 +14,16 @@ public class FalabellaPageUI {
       .located(By.cssSelector("#slider-faceta > div:nth-child(3) > a > img"));
 
   public static final Target LAPTOP = Target.the("pc seleccionado")
-      .located(By.cssSelector("#testId-pod-72729328"));
+      .located(By.cssSelector("#testId-searchResults-products > div:nth-child(1)"));
 
   public static final Target CAR_ADD = Target.the("boton agregar carrito")
-      .located(By.cssSelector("#product-b2c-ui div.jsx-1592394509.productContainer div.jsx-216455587.pdp-container > section:nth-child(3) > div > div > div > div.jsx-1942312284.add-quantity-and-add-to-cart-container button"));
+      .located(By.xpath("//*[@id=\"add-to-cart-button\"]"));
 
   public static final Target GO_TO_CAR = Target.the("ir al carrito")
       .located(By.xpath("//*[@id=\"linkButton\"]"));
 
   public static final Target CONTINUE_SHOPPING = Target.the("continuar compra")
-      .located(By.cssSelector("#popover-trigger-6"));
+      .located(By.xpath("//*[@id=\"popover-trigger-6\"]"));
 
   public static final Target EMAIL = Target.the("correo")
       .located(By.xpath("//*[@id=\"testId-Input-email\"]"));
