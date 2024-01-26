@@ -25,6 +25,7 @@ public class DataProvider {
         HashMap<String, String> userScenario = new HashMap<>();
 
         userScenario.put("falabella customer who enters the online store", environment.falabellaClient());
+        userScenario.put("falabella customer who wants to make a purchase", environment.falabellaClient());
 
         data = userScenario.get(clientType);
         Optional<String> dataOptional = Optional.ofNullable(data);
